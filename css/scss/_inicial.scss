@@ -1,0 +1,54 @@
+.inicial {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $white;
+
+    @include gutter-sobre;
+    
+    h1 {
+        color: $black;
+        padding-bottom: 5px;
+    }
+
+    p {
+        color: $black;
+    }
+
+    button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3em;
+        width: 15em;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        background-color: $purple;
+    }
+
+    button a {
+        text-decoration: none;
+        color: $white;
+        padding-left: 40px;
+    }
+
+    button img {
+        width: 35px;
+        height: 35px;
+        padding-right: 20px;
+    }
+}
+
+.div-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inicial-img {
+    img {
+        width: 230px;
+        height: 300px;
+    }
+}
+

@@ -1,0 +1,17 @@
+@mixin responsive($tela) {
+    @if $tela == desktop {
+        @media screen and (min-width: $desktop-device) {
+            @content;
+        }
+    }
+    @else if $tela == tablet {
+        @media screen and (min-width: $tablet-device) and (max-width: $desktop-device - 1) {
+            @content;
+        }
+    }
+    @else if $tela == mobile {
+        @media screen and (max-width: $tablet-device - 1) {
+            @content;
+        }
+    } 
+}

@@ -1,0 +1,9 @@
+.container {
+    @include flexbox-structure;
+    height: 30em;
+}
+
+.container-footer {
+    @include flexbox-structure-footer;
+}
+

@@ -1,0 +1,14 @@
+@mixin flexbox-structure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flexbox-structure-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
