@@ -5,13 +5,16 @@
 
     @include gutter-sobre;
     
-    h1 {
+    h2 {
         color: $black;
         padding-bottom: 5px;
+        font-family: $font-1;
+        font-size: 4rem;
     }
 
     p {
         color: $black;
+        font-family: $font-2;
     }
 
     button {
@@ -24,18 +27,25 @@
         border-radius: 10px;
         margin-top: 20px;
         background-color: $purple;
-    }
 
-    button a {
-        text-decoration: none;
-        color: $white;
-        padding-left: 40px;
-    }
+        &:hover {
+            cursor: pointer;
+        }
 
-    button img {
-        width: 35px;
-        height: 35px;
-        padding-right: 20px;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $white;
+            padding-left: 38px;
+            font-family: $font-1;
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+            margin-left: 10px;
+        }
     }
 }
 

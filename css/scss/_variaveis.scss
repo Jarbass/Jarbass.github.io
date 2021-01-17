@@ -4,12 +4,15 @@ $blue: #37B9F1;
 $white: #F7F7FE;
 $white-nav: #e7e7f0;
 
+$font-1: 'Lato', sans-serif;
+$font-2: 'Roboto', sans-serif;
+
 @mixin gutter {
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 15em;
+    padding-right: 15em;
 }
 
 @mixin gutter-sobre {
-    padding-left: 20em;
-    padding-right: 20em;
+    padding-left: 15em;
+    padding-right: 15em;
 }
