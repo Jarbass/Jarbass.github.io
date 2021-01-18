@@ -1,0 +1,40 @@
+.container-footer {
+    @include gutter;
+
+    flex-direction: row;
+    justify-content: space-between;
+    color: $white;
+    background: linear-gradient(180deg, rgb(30, 30, 30), rgb(33, 33, 33));
+    font-family: $font-2;
+
+    .social {
+        @include flexbox-structure;
+
+        flex-direction: row;
+        justify-content: space-around;
+        width: 20em;
+
+        .rede-social {
+            @include flexbox-structure;
+
+            flex-direction: row;
+            padding: 5px 5px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-10%);
+                }
+            }
+        }
+
+        .linkedin img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.construcao {
+    display: none;
+}
+
+// TALVEZ COLOCAR UM CARROSEL
+.cont-projetos {
+    color: $white;
+    background: linear-gradient(180deg, #100F10, rgb(30, 30, 30));
+
+    h3 {
+        font-family: $font-1;
+        font-size: 2rem;
+    }
+
+    img {
+        margin-top: 90px;
+    }
+
+    p {
+        font-family: $font-2;
+        margin-bottom: 90px;
+    }
+}
+
+.projetos {
+    background-color: palegreen;
+    @include flexbox-structure;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+    margin: 20px 20px;
+    padding: 20px 20px;
+
+    .proj {
+        @include flexbox-structure;
+        background-color: paleturquoise;
+        width: 200px;
+        margin: 20px 5px;
+    }
+}

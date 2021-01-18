@@ -4,9 +4,7 @@
 }
 
 .container-footer {
-    @include flexbox-structure-footer;
+    @include flexbox-structure;
+    height: 3em;;
 }
 
-body {
-    background-color: $black;
-}

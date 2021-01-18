@@ -1,5 +1,6 @@
 .container-sobre {
     @include flexbox-structure;
+    background-color: $black;
 }
 
 .sobre {
