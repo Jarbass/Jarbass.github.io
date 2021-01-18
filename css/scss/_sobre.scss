@@ -1,0 +1,57 @@
+.container-sobre {
+    @include flexbox-structure;
+}
+
+.sobre {
+    background-color: $white;
+    border-radius: 100px;
+    height: 40em;
+    padding: 40px 0px;
+
+    @include gutter-sobre;
+    @include flexbox-structure;
+
+    h3 {
+        font-family: $font-1;
+        font-size: 2rem;
+        padding-top:30px;
+    }
+
+    p {
+        font-family: $font-2;
+        margin: 50px 0px;
+    }
+
+    button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3em;
+        width: 15em;
+        border: none;
+        border-radius: 10px;
+        margin: 10px 0px 50px 0px;
+        background-color: $purple;
+        transition: 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-10%);
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $white;
+            padding: 10px 0px 10px 38px;
+            font-family: $font-1;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin-left: 10px; 
+        }
+    }
+}

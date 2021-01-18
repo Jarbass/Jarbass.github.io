@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 3em;
-    background-color: $white-nav;
+    background: linear-gradient(0deg,  rgb(30, 30, 30),  rgb(33, 33, 33));
 
     @include gutter;
 
@@ -26,7 +26,7 @@
     }
     
     a {
-        color: $black;
+        color: $white;
         text-decoration: none;
         font-family: $font-2;
 
