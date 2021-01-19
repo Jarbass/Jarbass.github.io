@@ -1,40 +1,53 @@
+.social {
+    @include flexbox-structure;
+
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 50px;
+    background-color: $black;
+
+
+    .rede-social {
+        @include flexbox-structure;
+        flex-direction: row;
+        padding: 5px 5px;
+        margin: 0 30px;
+
+        img {
+            width: 30px;
+            height: 30px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-10%);
+            }
+        }
+    }
+
+    .linkedin img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
 .container-footer {
     @include gutter;
 
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     color: $white;
-    background: linear-gradient(180deg, rgb(30, 30, 30), rgb(33, 33, 33));
+    background-color: $black;
     font-family: $font-2;
+}
 
-    .social {
-        @include flexbox-structure;
 
-        flex-direction: row;
-        justify-content: space-around;
-        width: 20em;
 
-        .rede-social {
-            @include flexbox-structure;
+//MOBILE
 
-            flex-direction: row;
-            padding: 5px 5px;
-
-            img {
-                width: 30px;
-                height: 30px;
-                transition: 0.3s ease-in-out;
-
-                &:hover {
-                    cursor: pointer;
-                    transform: translateY(-10%);
-                }
-            }
-        }
-
-        .linkedin img {
-            width: 25px;
-            height: 25px;
-        }
+@include responsive(mobile){
+    .container-footer {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

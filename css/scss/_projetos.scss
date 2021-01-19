@@ -5,7 +5,8 @@
 // TALVEZ COLOCAR UM CARROSEL
 .cont-projetos {
     color: $white;
-    background: linear-gradient(180deg, #100F10, rgb(30, 30, 30));
+    background-color: $black;
+    height: 30em;
 
     h3 {
         font-family: $font-1;
@@ -18,12 +19,11 @@
 
     p {
         font-family: $font-2;
-        margin-bottom: 90px;
+        margin-bottom: 50px;
     }
 }
 
 .projetos {
-    background-color: palegreen;
     @include flexbox-structure;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,7 +34,6 @@
 
     .proj {
         @include flexbox-structure;
-        background-color: paleturquoise;
         width: 200px;
         margin: 20px 5px;
     }

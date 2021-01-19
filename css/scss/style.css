@@ -98,6 +98,7 @@ table {
   height: 3em;
   background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(#212121));
   background: linear-gradient(0deg, #1e1e1e, #212121);
+  position: relative;
   padding-left: 15em;
   padding-right: 15em;
 }
@@ -128,6 +129,109 @@ table {
 
 .nav a:hover {
   border-bottom: 2px solid #6A26CD;
+}
+
+.menu {
+  display: none;
+}
+
+.menu img {
+  display: none;
+}
+
+.menu p {
+  display: none;
+}
+
+.hamburguer {
+  width: 30px;
+  height: 30px;
+  z-index: 999;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburguer img {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  margin-top: 10px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media screen and (max-width: 759px) {
+  .nav {
+    padding: 10px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav ul img {
+    display: block;
+    margin-top: 60px;
+    width: 90px;
+    height: 90px;
+  }
+  .nav ul p {
+    display: block;
+    font-family: "Lato", sans-serif;
+    color: #F7F7FE;
+  }
+  .nav li {
+    margin-top: 40px;
+    padding: 10px 0;
+  }
+  .nav li + li {
+    padding-left: 0;
+    padding-top: 0;
+    margin-top: 35px;
+  }
+  .hamburguer {
+    display: block;
+  }
+  .menu-hamb {
+    position: relative;
+    margin-top: 20px;
+  }
+  .menu {
+    position: absolute;
+    z-index: 998;
+    top: 0%;
+    left: -480%;
+    margin: 0;
+    background-color: #6A26CD;
+    width: 20em;
+    height: 23em;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  .menu.active {
+    top: -1500%;
+    background: transparent;
+  }
+  .seta.active {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 .inicial {
@@ -232,6 +336,30 @@ table {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 759px) {
+  .inicial {
+    padding-left: 0;
+    padding-right: 0;
+    height: 40em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .inicial-img {
+    margin: 50px auto;
+  }
+  .div-inicial {
+    margin-bottom: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .div-inicial h2 {
+    font-size: 3rem;
+  }
 }
 
 .content-separador {
@@ -355,6 +483,20 @@ table {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 759px) {
+  .sobre {
+    padding: 0;
+    margin: 0;
+    height: 55em;
+    border-radius: 50px 50px 10px 10px;
+  }
+  .sobre p {
+    text-align: center;
+    padding: 0 50px;
+    font-size: 1.2rem;
+  }
+}
+
 .container-ferramentas h3 {
   font-size: 2rem;
   padding: 50px 0px 50px 0px;
@@ -413,8 +555,8 @@ table {
 
 .cont-projetos {
   color: #F7F7FE;
-  background: -webkit-gradient(linear, left top, left bottom, from(#100F10), to(#1e1e1e));
-  background: linear-gradient(180deg, #100F10, #1e1e1e);
+  background-color: #100F10;
+  height: 30em;
 }
 
 .cont-projetos h3 {
@@ -428,11 +570,10 @@ table {
 
 .cont-projetos p {
   font-family: "Roboto", sans-serif;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .projetos {
-  background-color: palegreen;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -473,28 +614,11 @@ table {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: paleturquoise;
   width: 200px;
   margin: 20px 5px;
 }
 
-.container-footer {
-  padding-left: 15em;
-  padding-right: 15em;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #F7F7FE;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1e1e1e), to(#212121));
-  background: linear-gradient(180deg, #1e1e1e, #212121);
-  font-family: "Roboto", sans-serif;
-}
-
-.container-footer .social {
+.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,12 +635,12 @@ table {
   text-align: center;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 20em;
+  justify-content: center;
+  padding-bottom: 50px;
+  background-color: #100F10;
 }
 
-.container-footer .social .rede-social {
+.social .rede-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,23 +658,46 @@ table {
   -ms-flex-direction: row;
       flex-direction: row;
   padding: 5px 5px;
+  margin: 0 30px;
 }
 
-.container-footer .social .rede-social img {
+.social .rede-social img {
   width: 30px;
   height: 30px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-.container-footer .social .rede-social img:hover {
+.social .rede-social img:hover {
   cursor: pointer;
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
 }
 
-.container-footer .social .linkedin img {
+.social .linkedin img {
   width: 25px;
   height: 25px;
+}
+
+.container-footer {
+  padding-left: 15em;
+  padding-right: 15em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #F7F7FE;
+  background-color: #100F10;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 759px) {
+  .container-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

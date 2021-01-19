@@ -56,3 +56,20 @@
         }
     }
 }
+
+//MOBILE
+
+@include responsive(mobile){
+    .sobre {
+        padding: 0;
+        margin: 0;
+        height: 55em;
+        border-radius: 50px 50px 10px 10px;
+
+        p {
+            text-align: center;
+            padding: 0 50px;
+            font-size: 1.2rem;
+        }
+    }
+}

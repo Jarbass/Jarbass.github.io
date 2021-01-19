@@ -78,3 +78,23 @@
     }
 }
 
+@include responsive(mobile) {
+    .inicial {
+        padding-left: 0;
+        padding-right: 0;
+        height: 40em;
+        flex-direction: column-reverse;
+    }
+
+    .inicial-img {
+        margin: 50px auto;
+    }
+
+    .div-inicial {
+        margin-bottom: 70px;
+        align-items: center;
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
