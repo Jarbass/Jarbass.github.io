@@ -1,0 +1,96 @@
+//MENU HAMBURGUER - MOBILE//
+
+@include responsive(mobile) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .navbar-hamburguer {
+        width: 220px;
+        height: 300px;
+        background-color: $purple;
+        
+        top: -500px;
+        right: 0px;
+        transition: 0.8s ease;
+        position: fixed;
+    
+        border-radius: 0 0 0 100%;
+    }
+    
+    .change {
+        top: 0px;
+    }
+    
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+    }
+    
+    .nav-link {
+        font-size: 18px;
+        position: relative;
+        padding: 3px 0;
+    }
+    
+    .nav-link::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        transform: scaleX(0);
+        transition: .5s;
+    }
+    
+    .nav-link::after {
+        bottom: 0;
+        transform-origin: left;
+    }
+    
+    .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+    
+    
+    .hamburguer-menu {
+        width: 25px;
+        height: 20px;
+    
+        top: 15px;
+        right: 20px;
+        position: fixed;
+        cursor: pointer;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: $white;
+        transition: all .8s;
+    }
+    
+    .change .line-1 {
+        transform: rotateZ(-405deg) translate(-7px, 0px);
+    }
+    
+    .change .line-2 {
+        opacity: 0;
+    }
+    
+    .change .line-3 {
+        transform: rotateZ(405deg) translate(-10px, -3px);
+    }
+}

@@ -1,7 +1,7 @@
 .inicial {
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(0deg, #100F10, rgb(30, 30, 30));
+    background-color: $black;
 
     @include gutter;
     
@@ -63,18 +63,18 @@
     border-radius: 50%;
     background-color: $purple;
     
-    &:hover {
-        img{
-            opacity: 1;
-        } 
-    }
-    
     img {
         padding-top: 15px;
         width: 200px;
         height: 280px;
         transition: 0.5s ease;
         opacity: 0.5;
+    }
+    
+    &:hover {
+        img{
+            opacity: 1;
+        } 
     }
 }
 
@@ -83,16 +83,26 @@
         padding-left: 0;
         padding-right: 0;
         height: 40em;
-        flex-direction: column-reverse;
+        top: 3em;
+        flex-direction: column-reverse;   
     }
 
     .inicial-img {
         margin: 50px auto;
     }
 
+    .div-inicial-container {
+        width: 100%;
+        position: relative;
+        background-color: $black;
+    }
+
     .div-inicial {
+        padding-top: 50px;
         margin-bottom: 70px;
         align-items: center;
+        position: relative;
+        
         h2 {
             font-size: 3rem;
         }
